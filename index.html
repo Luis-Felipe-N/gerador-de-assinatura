@@ -1,0 +1,79 @@
+
+
+                        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table id="capture" width="650" cellspacing="0" cellpadding="0" border="0" style="position: relative; table-layout: fixed;background-color:#FFFFFF">
+            <tbody>
+                <tr>
+                    <td width="">
+                        <img style="display:block; width: 210px;" alt="Brasão da República" src="https://www.gov.br/economia/pt-br/centrais-de-conteudo/imagens/assinaturaf.png">
+                    </td>
+                    <td width="420">
+                        <span id="mnome" style="position:absolute; left: 225px; top:30px; font-size:16px; color: #3C3C3B;font-weight:900; font-family:Raleway;">sdda</span><br>
+                        <span id="mcargo" style="position: absolute; left: 225px; top:57px; font-size: 13px;color: #3C3C3B; font-family: font-family:Raleway; font-weight:500;font-family:Raleway;">adasda</span><br>
+                        <span id="memail" style="position: absolute; left: 225px; top:76px; font-size: 13px; font-family:Raleway; color: #3C3C3B; font-weight:500;font-family:Raleway;text-decoration:none;">adasda</span><br>
+                        <span id="mtelefone" style="position: absolute; left:225px; top:97px; font-size: 13px; font-family:Raleway; color: #3C3C3B; font-weight:500;font-family:Raleway;">(adasda) asdasda</span><br>
+                        <span id="mlotacao" style="position: absolute; left:225px; top:117px;  font-size: 13px; font-family:Raleway; color: #3C3C3B; font-weight:500;font-family:Raleway;">asdasda</span><br>
+                        <span id="morgao" style="position: absolute; left:225px; top:136px;  font-size: 13px; font-family:Raleway; color: #3C3C3B; font-weight:500;font-family:Raleway;">asdasda</span><br>
+                        <span id="msite"><a href="https://gov.br/economia" target="blank" style="position: absolute; left:225px; top:156px;  font-size: 14px; font-family:Raleway; color: #3C3C3B; font-weight:700;font-family:Raleway;text-decoration:none !important;">gov.br/economia</a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <form>
+                <div>
+                    <label >
+                        Nome
+                        <input type="text" for="mnome">
+                    </label>
+                    <label >
+                        Cargo
+                        <input type="text" for="mcargo">
+                    </label>
+                    <label >
+                        Email
+                        <input type="text" for="memail">
+                    </label>
+                    <label >
+                        Telefone
+                        <input type="text" for="mtelefone">
+                    </label>
+                    <label >
+                        Lotação
+                        <input type="text" for="mlotacao">
+                    </label>
+                    <label >
+                        Orgão
+                        <input type="text" for="morgao">
+                    </label>
+                    <label >
+                        Site
+                        <input type="text" for="msite">
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('form').forEach(input => {
+            input.addEventListener('input', (e) => {
+                let to = e.target.getAttribute("for")
+                console.log(to)
+                document.querySelector(`#${to}`).textContent = e.target.value
+            })
+        })
+    </script>
+</body>
+</html>
